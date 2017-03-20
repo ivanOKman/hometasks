@@ -27,7 +27,7 @@ class sysdata:
         self.swap = ('Overall SWAP usage: '+str((psutil.swap_memory().used/1024/1024).__round__(2))+' MB')
         self.io_read = ('I/O info (READ FROM DISK): '+str((psutil.disk_io_counters()[3]/1024/1024).__round__(2))+' MB')
         self.io_write = ('I/O info (WRITTEN TO DISK): '+str((psutil.disk_io_counters()[4]/1024/1024).__round__(2))+' MB')
-        self.net_s = ('Network info (SENT: '+str((psutil.net_io_counters(pernic=False)[0]/1024/1024).__round__(2))+' MB')
+        self.net_s = ('Network info (SENT): '+str((psutil.net_io_counters(pernic=False)[0]/1024/1024).__round__(2))+' MB')
         self.net_r = ('Network info (RECEIVED): ' + str((psutil.net_io_counters(pernic=False)[1] / 1024 / 1024).__round__(2))+' MB')
         self.timestamp = datetime.datetime.fromtimestamp(tm).strftime('%Y-%m-%d %H:%M:%S')
 
